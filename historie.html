@@ -2,19 +2,65 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <title>Historie Aerobiku</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viki - Úvod</title>
     <style>
-        body { padding: 40px; font-family: 'Arial', sans-serif; background-color: #f0fdfa; color: #0d9488; max-width: 800px; margin: auto; }
-        h1 { color: #0f766e; text-align: center; }
-        .back { display: block; margin-top: 30px; font-weight: bold; color: #0f766e; text-decoration: none; text-align: center; }
+        body {
+            padding: 40px; font-family: 'Arial', sans-serif; line-height: 1.6;
+            background-color: #f0fdfa; color: #0d9488; max-width: 900px; margin: auto;
+            text-align: center;
+        }
+        h1 { color: #0f766e; font-size: 3.5rem; margin-bottom: 10px; }
+        .intro-text { font-size: 1.8rem; margin-bottom: 40px; font-weight: bold; }
+        
+        /* Styl pro tlačítka */
+        .button-stack {
+            display: flex; flex-direction: column; align-items: center; gap: 15px;
+            margin-bottom: 50px;
+        }
+        .btn {
+            width: 300px; padding: 15px; background-color: #0d9488; color: white;
+            text-decoration: none; border-radius: 50px; font-weight: bold;
+            transition: 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.1); font-size: 1.1rem;
+            border: none; cursor: pointer;
+        }
+        .btn:hover { background-color: #0f766e; transform: scale(1.05); }
+
+        /* Styl pro sekci s parkem a PDF */
+        .park-section {
+            margin-top: 40px; padding: 20px; background: white; 
+            border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .external-link {
+            display: block; margin-bottom: 20px; font-size: 1.2rem;
+            color: #0d9488; font-weight: bold; text-decoration: underline;
+        }
+        iframe {
+            border: 2px solid #0f766e; border-radius: 10px;
+        }
     </style>
 </head>
 <body>
-    <h1>Historie Aerobiku</h1>
-    <p>Aerobik vznikl v roce 1968 díky Dr. Kennethu Cooperovi.</p>
-    <p>V 80. letech ho proslavila Jane Fondová a její ikonické čelenky.</p>
-    <p>Dnes je to sport plný energie a radosti, který milují lidé po celém světě.</p>
-    
-    <a href="index.html" class="back">← Zpět k Viki na úvod</a>
+
+    <h1>Viki</h1>
+    <p class="intro-text">Miluji aerobik</p>
+
+    <div class="button-stack">
+        <a href="aerobik.html" class="btn">Historie Aerobiku</a>
+        <a href="#park-info" class="btn">Mé oblíbené místo</a>
+    </div>
+
+    <hr style="border: 1px solid #ccfbf1; margin: 40px 0;">
+
+    <div id="park-info" class="park-section">
+        <h2>Průhonický park</h2>
+        
+        <a href="https://www.pruhonickypark.cz" target="_blank" class="external-link">
+            Oficiální web Průhonického parku (klikni zde)
+        </a>
+
+        <iframe src="pruhonice.pdf" width="100%" height="600px"></iframe>
+    </div>
+
 </body>
 </html>
