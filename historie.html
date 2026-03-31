@@ -3,50 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Historie Aerobiku</title>
+    <title>Osobní stránka - Viki</title>
     <style>
+        /* Celkový vzhled */
         body {
             padding: 40px; font-family: 'Arial', sans-serif; line-height: 1.6;
-            background-color: #f0fdfa; color: #0d9488; max-width: 800px; margin: auto;
+            background-color: #f0fdfa; color: #0d9488; max-width: 900px; margin: auto;
         }
-        h1 { color: #0f766e; text-align: center; }
-        .back-link { display: block; margin-top: 30px; color: #0f766e; font-weight: bold; }
+        h1, h2 { color: #0f766e; text-align: center; }
+        
+        /* Styl pro menu s tlačítky */
+        .menu {
+            display: flex; justify-content: center; gap: 20px; 
+            margin-bottom: 50px; padding: 20px;
+            background: #ccfbf1; border-radius: 15px;
+        }
+        .btn {
+            padding: 15px 25px; background-color: #0d9488; color: white;
+            text-decoration: none; border-radius: 8px; font-weight: bold;
+            transition: 0.3s; cursor: pointer; border: none; font-size: 1rem;
+        }
+        .btn:hover { background-color: #0f766e; transform: scale(1.05); }
+
+        /* Sekce obsahu */
+        .section {
+            background: white; padding: 30px; border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-top: 20px;
+            display: none; /* Schová sekce, dokud se na ně neklikne */
+        }
+        /* Zobrazí sekci, která je "cílem" odkazu */
+        .section:target { display: block; }
+
+        .back-to-top {
+            display: inline-block; margin-top: 20px; color: #0f766e;
+            text-decoration: none; font-weight: bold;
+        }
+        iframe { border: 2px solid #0f766e; border-radius: 8px; margin-top: 15px; }
     </style>
 </head>
 <body>
-    <h1>Historie Aerobiku</h1>
-    
-    <p>Aerobik vznikl v roce 1968, kdy Dr. Kenneth Cooper publikoval svou převratnou knihu, ve které tvrdil, že skákání v rytmu diska je jediný způsob, jak přežít 20. století.</p>
 
-    <h2>Zlatá éra čelenek</h2>
-    <p>V 80. letech se aerobik stal oficiálním náboženstvím díky Jane Fondové. Hlavním pravidlem bylo mít na sobě co nejvíce neonových barev a čelenku, která byla tak těsná, že potlačovala špatné myšlenky.</p>
+    <h1>Vítejte u Viki</h1>
+    <p style="text-align: center;">Vyberte si sekci, která vás zajímá:</p>
 
-    <h2>Moderní doba</h2>
-    <p>Dnes už víme, že bez aerobiku by se lidstvo pravděpodobně přestalo hýbat úplně. Viki je momentálně největší ambasadorkou tohoto sportu a plánuje zavést povinné lekce aerobiku v každé cukrárně.</p>
+    <div class="menu">
+        <a href="#aerobik" class="btn">Historie Aerobiku</a>
+        <a href="#park" class="btn">Průhonický park (PDF)</a>
+    </div>
 
-    <a href="index.html" class="back-link">← Zpět k Viki</a>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <title>Průhonický park - Dokument</title>
-</head>
-<body>
+    <div id="aerobik" class="section">
+        <h2>Historie Aerobiku</h2>
+        <p>Aerobik vznikl v roce 1968, kdy Dr. Kenneth Cooper publikoval svou převratnou knihu. Tvrdil v ní, že pohyb v rytmu je klíčem ke zdraví.</p>
+        <h3>Zlatá éra čelenek</h3>
+        <p>V 80. letech se aerobik stal hitem díky Jane Fondové. Hlavním pravidlem bylo mít na sobě co nejvíce neonových barev a legíny.</p>
+        <h3>Moderní doba</h3>
+        <p>Viki je momentálně největší ambasadorkou tohoto sportu a šíří radost z pohybu všude, kam přijde.</p>
+        <a href="#" class="back-to-top">↑ Zpět na začátek</a>
+    </div>
 
-    <h1>Můj oblíbené místo: Průhonický park</h1>
-
-    <p>
-        Více informací o tomto místě najdete na: 
-        <a href="https://www.pruhonickypark.cz" target="_blank">Oficiální stránky Průhonického parku</a>
-    </p>
-
-    <hr>
-
-    <iframe src="pruhonice.pdf" width="100%" height="600px"></iframe>
-
-    <p><a href="index.html">← Zpět na úvodní stránku</a></p>
+    <div id="park" class="section">
+        <h2>Můj oblíbený Průhonický park</h2>
+        <p style="text-align: center;">
+            <a href="https://www.pruhonickypark.cz" target="_blank" style="color: #0d9488; font-weight: bold;">
+                Oficiální stránky parku zde
+            </a>
+        </p>
+        
+        <iframe src="pruhonice.pdf" width="100%" height="600px"></iframe>
+        
+        <br>
+        <a href="#" class="back-to-top">↑ Zpět na začátek</a>
+    </div>
 
 </body>
 </html>
